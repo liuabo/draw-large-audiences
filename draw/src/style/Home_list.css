@@ -1,0 +1,72 @@
+.slick-track {
+    display: flex;
+    height: 2.11rem;
+    width: 100%;
+    background: #d00;
+}
+
+.ant-carousel {
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.ant-carousel .slick-slide {
+    text-align: center;
+    height: 2.11rem;
+    background: #364d79;
+    overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+    color: #fff;
+}
+
+.slick-track img{
+  height:2.11rem;
+}
+.slick-list {
+    background: #d00;
+}
+
+#content {
+    height: 100%;
+
+}
+.Home_list{
+  padding-top: 18px;
+  padding-bottom: 10px;
+  background: #ebebeb;
+}
+.Home_list img{
+  height:1.92rem;
+  width:100%;
+}
+.Home_list li {
+  margin: 0 17px 17px 17px;
+  box-shadow: 0.5px 0.5px 1px #a8a8a8;
+  cursor: pointer;
+}
+
+.List_bottom{
+  height:0.5rem;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.15rem;
+  padding-right: 0.15rem;
+}
+.col_left{
+  font-size: 12px;
+    line-height: 15px;
+    user-select: text;
+    color: #333;
+}
+.col_left h4{
+  font-size: 8px;
+  color: #9a9a9a;
+}
+.List_bottom h2{
+  color: #f78360;
+  font-size: 18px;
+}
