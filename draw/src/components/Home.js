@@ -10,7 +10,8 @@ export default class Home extends Component {
     super();
     this.state = {
       films: [],
-      Home_list: []
+      Home_list: [],
+      list:[]
     };
   }
   componentDidMount() {
@@ -27,6 +28,15 @@ export default class Home extends Component {
         console.log(res);
         this.setState({
           Home_list: res.data.data.films
+        })
+        console.log(this.films)
+      })
+
+      axios.get('/v4/api/film/coming-soon?__t=1519030220262&page=1&count=3')
+      .then((res)=>{
+        console.log(res);
+        this.setState({
+          list: res.data.data.films
         })
         console.log(this.films)
       })
@@ -75,10 +85,29 @@ export default class Home extends Component {
             </ul>
           )
         })
-
       }
       <div  onClick={() => that.goToFilms()} className="more-button">更多热映电影</div>
       <div className="dividing-line"><div className="upcoming">即将上映</div></div>
+        {
+          this.state.list.map(function(item, index){
+            return (
+              <ul  key={item.name} className="Home_list">
+                <li key={item.name}>
+                  <img src={item.cover.origin}  />
+                  <div className="List_bottom">
+                    <div className="col_left">
+                      <h3>{item.name}</h3>
+                      <h4>{item.scheduleCount}家影院上映{item.watchCount}人购票</h4>
+                    </div>
+                    <h2>{item.grade}</h2>
+                  </div>
+                </li>
+              </ul>
+            )
+          })
+
+        }
+        {<div class="more-button">更多即将上映电影</div>}
       </div>
     );
   }

@@ -47,7 +47,6 @@ html,body{
 }
 .Home_list li {
   padding: 0 17px 17px 17px;
-  box-shadow: 0.5px 0.5px 1px #a8a8a8;
   cursor: pointer;
   background: #ebebeb;
 }
@@ -60,6 +59,7 @@ html,body{
   align-items: center;
   padding-left: 0.15rem;
   padding-right: 0.15rem;
+  box-shadow: 0.5px 0.5px 1px #a8a8a8;
 }
 .col_left{
   font-size: 12px;

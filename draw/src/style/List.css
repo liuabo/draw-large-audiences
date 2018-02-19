@@ -1,7 +1,11 @@
 .List{
   height:100%;
-  margin-top: 0.5rem;
   background: #f9f9f9;
+  padding-left: 15px;
+  padding-right: 15px;
+  height:100%;
+  width: 100%;
+  min-height: 100%;
 }
 .ant-tabs{
   height:100%!important;
@@ -25,4 +29,70 @@
 }
 .ant-tabs-nav-container-scrolling{
   padding:0!important;
+}
+.list_box{
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: dashed 1px #c9c9c9;
+  cursor: pointer;
+}
+.list_box li{
+  display: flex;
+}
+.film-desc div{
+  position: relative;
+  line-height: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.film-name{
+  color:#000;
+}
+.film-name span{
+  float: right;
+  font-size: 16px;
+  line-height: 32px;
+  color: #fc7103;
+}
+.film-name span .icon-jiantou{
+  font-size: 10px !important;
+  line-height: 29px;
+  color: #c6c6c6;
+}
+
+.film-intro{
+  height: 24px;
+  line-height: 24px;
+  color: #8e8e8e;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  display: inline-block;
+}
+.film-counts{
+  line-height: 24px;
+    color: #8e8e8e;
+    font-size: 12px;
+}
+.list_box li span{
+  position: absolute;
+  right: 0;
+}
+.film-desc {
+    padding-left: 15px;
+    display: inline-block;
+    height:100%;
+    width: 75%;
+}
+.list_box img{
+  width:0.62rem;
+  height:0.82rem;
+}
+.ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content > .ant-tabs-tabpane{
+  height:100%!important;
+  overflow-y: auto;
+  padding-bottom: 0.5rem;
 }

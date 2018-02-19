@@ -159,6 +159,7 @@ header {
 #content{
   margin-top: 0.5rem;
   background: #ebebeb;
+  height:100%;
 }
 .ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content{
   height:100%;
