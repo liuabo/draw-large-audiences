@@ -1,3 +1,4 @@
+@import '~antd/dist/antd.css';
 body,
 h1,
 h2,
@@ -104,6 +105,7 @@ header {
 
 #root {
     height: 100%;
+    background: #ebebeb;
 }
 
 .head {
@@ -153,4 +155,11 @@ header {
 
 .App {
     height: 100%;
+}
+#content{
+  margin-top: 0.5rem;
+  background: #ebebeb;
+}
+.ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content{
+  height:100%;
 }

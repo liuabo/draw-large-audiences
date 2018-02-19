@@ -7,26 +7,20 @@ import {
 import { Carousel } from "antd";
 import axios from 'axios';
 
-import Home from './components/Home';
 import List from './components/List';
-import Home_list from './components/Home_list';
+
+import Home from './components/Home';
 import './App.css';
+import './style/reset.css';
+import './style/Home_list.css'
 import './iconfont/iconfont.css';
 
-import './style/reset.css'
 class App extends Component {
   constructor() {
     super();
     this.state = {
       films: []
     };
-  }
-  componentDidMount() {
-    console.log("测试数据");
-    axios.get("v4/api/billboard/home?__t=1518672841606").then(res => {
-      console.log("rrfewres");
-      this.setState({ films: res.data.data.billboards });
-    });
   }
   render() {
     return <Router>
@@ -49,13 +43,11 @@ class App extends Component {
           </header>
           <div id="content">
             <NavLink exact to="/"></NavLink>
-            <NavLink to="/"></NavLink>
-
+            <NavLink exact to="/List"></NavLink>
 
             <Route exact path="/" component={Home} />
-            <Route path="/" component={Home_list} />
+            <Route exact path="/List" component={List} />
           </div>
-          <div className=""></div>
         </div>
       </Router>;
   }

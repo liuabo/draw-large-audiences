@@ -1,3 +1,6 @@
+html,body{
+  background: #ebebeb;
+}
 .slick-track {
     display: flex;
     height: 2.11rem;
@@ -30,21 +33,23 @@
 
 #content {
     height: 100%;
-
+}
+#root{
+  background: #ebebeb;
 }
 .Home_list{
-  padding-top: 18px;
-  padding-bottom: 10px;
   background: #ebebeb;
+  padding-top: 0.18rem;
 }
 .Home_list img{
   height:1.92rem;
   width:100%;
 }
 .Home_list li {
-  margin: 0 17px 17px 17px;
+  padding: 0 17px 17px 17px;
   box-shadow: 0.5px 0.5px 1px #a8a8a8;
   cursor: pointer;
+  background: #ebebeb;
 }
 
 .List_bottom{
@@ -69,4 +74,34 @@
 .List_bottom h2{
   color: #f78360;
   font-size: 18px;
+}
+.more-button {
+    width: 160px;
+    height: 30px;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    margin: 10px auto 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    color: #616161;
+    cursor: pointer;
+}
+.dividing-line {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #a8a8a8;
+}
+.upcoming {
+    width: 65px;
+    height: 20px;
+    margin: 0 auto;
+    margin-bottom: -10px;
+    border-radius: 5px;
+    font-size: 10px;
+    line-height: 20px;
+    text-align: center;
+    color: #eee;
+    background-color: #a7a7a7;
 }

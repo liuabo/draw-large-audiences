@@ -2,14 +2,15 @@ import React, { Component } from "react";
 import axios from "axios";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import { Carousel } from "antd";
-
+import List from './List';
 import '../style/Home_list.css'
 
 export default class Home extends Component {
   constructor() {
     super();
     this.state = {
-      films: []
+      films: [],
+      Home_list: []
     };
   }
   componentDidMount() {
@@ -21,9 +22,20 @@ export default class Home extends Component {
           films: res.data.data.billboards
         });
       });
+      axios.get('/v4/api/film/now-playing?__t=1518919552345&page=1&count=5')
+      .then((res)=>{
+        console.log(res);
+        this.setState({
+          Home_list: res.data.data.films
+        })
+        console.log(this.films)
+      })
   }
-  goto(fid) {
+  gotoDetail(fid) {
     this.props.history.push("Detail/" + fid);
+  }
+  goToFilms() {
+    this.props.history.push("List/")
   }
   render() {
     var settings = {
@@ -40,12 +52,33 @@ export default class Home extends Component {
         <Carousel {...settings}>
         {this.state.films.map(function(item, index) {
           return (
-            <div key={item.name} onClick={() => that.goto(item.id)}>
+            <div key={item.name} onClick={() => that.gotoDetail(item.id)}>
               <img src={item.imageUrl} />
             </div>
           );
         })}
       </Carousel>
+      {
+        this.state.Home_list.map(function(item, index){
+          return (
+            <ul  key={item.name} className="Home_list">
+              <li key={item.name}>
+                <img src={item.cover.origin}  />
+                <div className="List_bottom">
+                  <div className="col_left">
+                    <h3>{item.name}</h3>
+                    <h4>{item.scheduleCount}家影院上映{item.watchCount}人购票</h4>
+                  </div>
+                  <h2>{item.grade}</h2>
+                </div>
+              </li>
+            </ul>
+          )
+        })
+
+      }
+      <div  onClick={() => that.goToFilms()} className="more-button">更多热映电影</div>
+      <div className="dividing-line"><div className="upcoming">即将上映</div></div>
       </div>
     );
   }
