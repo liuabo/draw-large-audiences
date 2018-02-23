@@ -105,3 +105,12 @@ html,body{
     color: #eee;
     background-color: #a7a7a7;
 }
+#time{
+  font-size: 10px;
+  color: RGB(245, 162, 125);
+  line-height: 15px;
+  height: 35px;
+  padding-right: 0;
+  padding-top: 10px;
+  padding-left: 28px;
+}

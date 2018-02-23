@@ -97,12 +97,36 @@ header {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    overflow: hidden;
     position: fixed;
     top: 0;
     z-index: 999;
 }
-
+nav{
+  border-top: 1px solid #222;
+  box-shadow: 0 1px 1px #363636 inset;
+  background: #282828;
+  position: fixed;
+  display: block;
+  top: 0.5rem;
+  right: 110px;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: none!important;
+  transition: all ease 0.4s;
+  -webkit-transition: all ease 0.4s;
+}
+nav ul li {
+  line-height: 0.5rem;
+}
+nav ul li a{
+  display: block;
+  width: 100%;
+  padding: 0 16px;
+  border-bottom: 1px dotted #333;
+  color: #9a9a9a;
+  font-size: 14px;
+}
 #root {
     height: 100%;
     background: #ebebeb;
@@ -160,7 +184,22 @@ header {
   margin-top: 0.5rem;
   background: #ebebeb;
   height:100%;
+  overflow-y: auto;
 }
 .ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content{
   height:100%;
+}
+.ant-dropdown{
+  position: fixed;
+  border-top: 1px solid #222;
+    box-shadow: 0 1px 1px #363636 inset;
+    background: #282828;
+    position: fixed!important;
+    height:100%;
+    width:2.65rem;
+    top:0.5rem;
+}
+.ant-dropdown-menu{
+  height:100%;
+  width:2.65rem;
 }
